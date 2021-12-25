@@ -3,7 +3,7 @@ const presence = new Presence({
   }),
   browsingStamp = Math.floor(Date.now() / 1000);
 
-presence.on("UpdateData", async () => {
+presence.on("UpdateData", () => {
   const presenceData: PresenceData = {
     largeImageKey: "audiblelogo",
     startTimestamp: browsingStamp
