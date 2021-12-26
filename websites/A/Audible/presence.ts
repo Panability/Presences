@@ -62,8 +62,5 @@ presence.on("UpdateData", async () => {
     presenceData.smallImageKey = "search";
   }
 
-  if (!presenceData.details) {
-    presence.setTrayTitle();
-    presence.setActivity();
-  } else presence.setActivity(presenceData);
+  presence.setActivity(presenceData);
 });
