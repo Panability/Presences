@@ -2,7 +2,7 @@ const presence = new Presence({
     clientId: "924198999806857236"
   }),
   browsingStamp = Math.floor(Date.now() / 1000);
-
+// bruh lmao
 presence.on("UpdateData", () => {
   const presenceData: PresenceData = {
     largeImageKey: "audiblelogo",
