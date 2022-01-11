@@ -10,7 +10,7 @@ presence.on("UpdateData", async () => {
       startTimestamp: tmb
     },
     path = document.location.pathname.toLowerCase(),
-    showcon = await presence.getSetting("showContact");
+    showcon = await presence.getSetting<boolean>("showContact");
   // Home Page
   if (path === "/" || path.includes("/intl/")) {
     presenceData.largeImageKey = "icon";
@@ -31,7 +31,7 @@ presence.on("UpdateData", async () => {
     else {
       presenceData.state = document
         .getElementsByClassName("title-container")[0]
-        .querySelector("h2 > span > span").textContent;
+        .querySelector("div > span > h2").textContent;
     }
     presenceData.details = "Reading messages from:";
     presenceData.largeImageKey = "icon";
